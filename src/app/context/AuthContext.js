@@ -22,6 +22,7 @@ export const AuthProvider = ({ children }) => {
 
   const fetchProfile = async (token) => {
     try {
+      console.log(`${process.env.NEXT_PUBLIC_API_URL}/profile`);
       const res = await axios.get(
         `${process.env.NEXT_PUBLIC_API_URL}/profile`,
         {
