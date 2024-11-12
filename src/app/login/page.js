@@ -21,7 +21,7 @@ export default function Login() {
     try {
       await login(data.email, data.password); // Use login function from useAuth to authenticate
       toast.success("Login successful!");
-      router.push("/profile"); // Redirect to profile page
+      router.push("../profile"); // Redirect to profile page
     } catch (error) {
       console.error("Login error:", error);
       toast.error("Login failed. Please check your credentials.");

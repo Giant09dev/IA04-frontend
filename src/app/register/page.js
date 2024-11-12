@@ -29,7 +29,7 @@ export default function Register() {
 
       if (response.ok) {
         toast.success("Registration successful!");
-        router.push("/login"); // Redirect to login page after successful registration
+        router.push("../login"); // Redirect to login page after successful registration
       } else {
         const errorResult = await response.json();
         toast.error(errorResult.message || "Registration failed.");

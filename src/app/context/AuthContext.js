@@ -50,6 +50,7 @@ export const AuthProvider = ({ children }) => {
         "Authorization"
       ] = `Bearer ${receivedToken}`;
       fetchProfile(receivedToken);
+      router.push("../profile");
     } catch (error) {
       console.error("Login error:", error);
     }
@@ -60,7 +61,7 @@ export const AuthProvider = ({ children }) => {
     setToken(null);
     setUser(null);
     delete axios.defaults.headers.common["Authorization"];
-    router.push("/login");
+    router.push("../login");
   };
 
   return (
