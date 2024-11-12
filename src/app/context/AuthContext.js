@@ -38,6 +38,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
+      console.log(`${process.env.NEXT_PUBLIC_API_URL}/login`);
       const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/login`, {
         email,
         password,
